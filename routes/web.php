@@ -16,11 +16,10 @@ use \App\Http\Controllers\PostController;
 Route::get('/', function () {
     return view('welcome');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/create-post', [PostController::class,'create']);
 Route::post('/store-post', [PostController::class,'store']);
 Route::get('/get-post/{id}', [PostController::class,'show']);
-
-
-
-
