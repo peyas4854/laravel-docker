@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function index()
+    {
+        dd('dfg');
+    }
     public function create()
     {
         return view('post.create');
