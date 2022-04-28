@@ -17,7 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/store-post', [PostController::class,'store']);
+Route::get('/create-post', [PostController::class,'create']);
+Route::post('/store-post', [PostController::class,'store']);
+Route::get('/get-post/{id}', [PostController::class,'show']);
 
 
 
