@@ -41,12 +41,12 @@
                                         @endcan
                                     </td>
                                 </tr>
-                                @endforeach
-                                </table>
-                                <div class="col-12">
-                                    {!! $roles->links() !!}
+                            @endforeach
+                        </table>
+                        <div class="col-12">
+                            {!! $roles->links() !!}
 
-                                </div>
+                        </div>
                     </div>
                 </div>
             </div>

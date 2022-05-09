@@ -4,8 +4,9 @@ use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\PostController;
 use App\Http\Controllers\HomeController;
-use \App\Http\Controllers\StudentController;
-use \App\Http\Controllers\CommentController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\UserController;
 
 
 Route::get('/test', function () {
@@ -39,6 +40,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/students/list', [StudentController::class, 'getStudents']);
     //roles
     Route::resource('roles', RoleController::class);
+    //users
+    Route::resource('users', UserController::class);
+
 });
 
 
