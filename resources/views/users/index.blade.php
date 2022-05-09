@@ -12,12 +12,11 @@
                 <div class="card">
                     <div class="card-header">
                         <h2>Users Management</h2>
-{{--                        @can('role-create')--}}
                             <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User</a>
-{{--                        @endcan--}}
                     </div>
 
                     <div class="card-body">
+
                         <table class="table table-bordered">
                             <tr>
                                 <th>No</th>
@@ -33,8 +32,8 @@
                                     <td>{{ $user->email }}</td>
                                     <td>
                                         @if(!empty($user->getRoleNames()))
-                                            @foreach($user->getRoleNames() as $v)
-                                                <label class="badge badge-success">{{ $v }}</label>
+                                            @foreach($user->getRoleNames() as $role)
+                                                <span class="badge bg-success"> {{ $role }} </span>
                                             @endforeach
                                         @endif
                                     </td>
