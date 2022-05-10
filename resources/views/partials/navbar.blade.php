@@ -14,11 +14,21 @@
                     users
                     </a>
                 </li>
+                @can('role-list')
                 <li class="nav-item">
                     <a class="nav-link " href="{{route('roles.index')}}">
                     roles
                     </a>
                 </li>
+                @endcan
+                @can('product-list')
+                    <li class="nav-item">
+                        <a class="nav-link" >
+                            product
+                        </a>
+                    </li>
+                @endcan
+
             </ul>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
