@@ -10,8 +10,12 @@ class PostController extends Controller
 {
     public function index()
     {
-        dd('dfg');
+        $posts = Post::query()->orderBy('id', 'desc')
+            ->paginate(10);
+
+        return view('post.index', compact('posts'));
     }
+
     public function create()
     {
         return view('post.create');

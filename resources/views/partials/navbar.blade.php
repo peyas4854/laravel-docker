@@ -9,6 +9,26 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link " href="{{route('users.index')}}">
+                    users
+                    </a>
+                </li>
+                @can('role-list')
+                <li class="nav-item">
+                    <a class="nav-link " href="{{route('roles.index')}}">
+                    roles
+                    </a>
+                </li>
+                @endcan
+                @can('product-list')
+                    <li class="nav-item">
+                        <a class="nav-link" >
+                            product
+                        </a>
+                    </li>
+                @endcan
+
             </ul>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
